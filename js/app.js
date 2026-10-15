@@ -13,13 +13,13 @@ const tip=(t,c='warn')=>`<div class="box c-${c}">${t}</div>`;
 function attrs(s){const o={};s.replace(/(\w+)="([^"]*)"/g,(m,k,v)=>o[k]=v);return o}
 function block(s){
  if(s.startsWith(':::')){const m=s.match(/^:::(\w+)\n([\s\S]*?)\n:::/);return `<div class="box c-${esc(m[1])}">${marked.parse(m[2])}</div>`}
- const m=s.match(/^\{\{(\w+) (.*)\}\}/),t=m[1],a=attrs(m[2]);
+ const m=s.match(/\{\{(\w+) (.*)\}\}/),t=m[1],a=attrs(m[2]);
  if(t==='video')return `<figure><video controls playsinline preload="metadata" ${a.poster?`poster="${pth(a.poster)}"`:''} src="${pth(a.src)}"></video>${a.caption?`<figcaption>${esc(a.caption)}</figcaption>`:''}</figure>`;
  if(t==='youtube')return `<figure><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(a.id)}" title="${esc(a.caption||'Video')}" allowfullscreen loading="lazy"></iframe></div>${a.caption?`<figcaption>${esc(a.caption)}</figcaption>`:''}</figure>`;
- if(t==='galeri')return `<div class="gal">${(a.images||'').split('|').filter(Boolean).map(i=>`<img src="${pth(i)}" alt="" loading="lazy">`).join('')}</div>`;
+ if(t==='galeri')return `<div class="gal">${(a.images||'').split('|').filter(Boolean).map(i=>`<img src="${pth(i)}" alt="">`).join('')}</div>`;
  return ''}
 function renderMd(md){
- const re=/^:::\w+\n[\s\S]*?\n:::[ \t]*$|^\{\{\w+ .*\}\}[ \t]*$/gm;let out='',last=0,m;
+ const re=/^:::\w+\n[\s\S]*?\n:::[ \t]*$|^[ \t]*(?:(?:[-*+]|\d+\.)[ \t]+)?\{\{\w+ .*\}\}[ \t]*$/gm;let out='',last=0,m;
  while((m=re.exec(md))){out+=marked.parse(md.slice(last,m.index))+block(m[0]);last=re.lastIndex}
  out+=marked.parse(md.slice(last));
  return out.replace(/(src|poster)="\/(?!\/)/g,'$1="').replace(/<img /g,'<img loading="lazy" ')}
