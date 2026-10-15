@@ -1,7 +1,7 @@
 # Ganti USERNAME/REPO dengan repository GitHub Anda
 backend:
   name: github
-  repo: USERNAME/REPO
+  repo: heygoldfish
   branch: main
 
 locale: id
