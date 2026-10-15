@@ -1,0 +1,75 @@
+# Ganti USERNAME/REPO dengan repository GitHub Anda
+backend:
+  name: github
+  repo: USERNAME/REPO
+  branch: main
+
+locale: id
+media_folder: assets/images
+public_folder: assets/images
+
+collections:
+  - name: artikel
+    label: Artikel
+    label_singular: Artikel
+    folder: content/artikel
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{category}})"
+    fields:
+      - { label: Judul, name: title, widget: string }
+      - label: Kategori
+        name: category
+        widget: select
+        options:
+          - { label: Pengenalan, value: kenal }
+          - { label: Persiapan, value: setup }
+          - { label: Ikan Baru, value: baru }
+          - { label: Penyakit, value: sakit }
+          - { label: Perawatan, value: rutin }
+      - label: Ikon (dipakai bila tanpa gambar sampul)
+        name: icon
+        widget: select
+        default: fish
+        options: [fish, tank, box, dots, drop, cal, wave]
+      - { label: Gambar sampul, name: cover, widget: image, required: false }
+      - { label: Estimasi waktu baca (menit), name: minutes, widget: number, value_type: int, min: 1, default: 5 }
+      - { label: Ringkasan (1 kalimat), name: summary, widget: string }
+      - { label: Kata kunci pencarian (pisahkan spasi), name: keywords, widget: string, required: false }
+      - { label: Tampil di "Sering Dibaca", name: popular, widget: boolean, default: false, required: false }
+      - { label: Urutan (kecil = lebih awal), name: order, widget: number, value_type: int, default: 50 }
+      - { label: Isi artikel, name: body, widget: markdown, hint: "Gunakan Heading 2 (##) untuk tiap bagian; daftar isi dibuat otomatis." }
+
+  - name: pengaturan
+    label: Kamus
+    files:
+      - label: Kamus Goldfish
+        name: kamus
+        file: content/kamus.json
+        format: json
+        fields:
+          - label: Istilah
+            name: items
+            widget: list
+            summary: "{{fields.term}}"
+            fields:
+              - { label: Istilah, name: term, widget: string }
+              - label: Kelompok
+                name: cat
+                widget: select
+                options:
+                  - { label: Ikan, value: ikan }
+                  - { label: Perawatan, value: rawat }
+                  - { label: Air & Alat, value: air }
+                  - { label: Penyakit, value: sakit }
+              - { label: Penjelasan, name: def, widget: text }
+              - label: Artikel terkait (opsional)
+                name: article
+                widget: relation
+                collection: artikel
+                search_fields: [title]
+                value_field: "{{slug}}"
+                display_fields: [title]
+                required: false

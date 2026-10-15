@@ -1,0 +1,275 @@
+{
+  "items": [
+    {
+      "term": "Wen",
+      "cat": "ikan",
+      "def": "Tonjolan jaringan lunak di kepala, khas Oranda, Ranchu, dan Lionhead.",
+      "article": "jenis"
+    },
+    {
+      "term": "Fancy goldfish",
+      "cat": "ikan",
+      "def": "Kelompok goldfish bertubuh bulat dengan ekor atau sirip yang diperindah, umumnya lebih sensitif daripada tipe ramping.",
+      "article": "jenis"
+    },
+    {
+      "term": "Comet / Common",
+      "cat": "ikan",
+      "def": "Goldfish bertubuh ramping dengan ekor tunggal, lebih tangguh dan bisa tumbuh besar."
+    },
+    {
+      "term": "Ekor ganda",
+      "cat": "ikan",
+      "def": "Ekor yang terbelah dua, ciri Fantail, Oranda, dan Ryukin.",
+      "article": "jenis"
+    },
+    {
+      "term": "Telescope (mata teleskop)",
+      "cat": "ikan",
+      "def": "Mata yang menonjol keluar; penglihatan terbatas dan rentan luka bila dekorasi tajam.",
+      "article": "jenis"
+    },
+    {
+      "term": "Punuk",
+      "cat": "ikan",
+      "def": "Lengkungan di belakang kepala, khas Ryukin.",
+      "article": "jenis"
+    },
+    {
+      "term": "Tubercle pemijahan",
+      "cat": "ikan",
+      "def": "Bintik putih kecil pada tutup insang dan sirip dada ikan jantan matang; normal, bukan white spot.",
+      "article": "whitespot"
+    },
+    {
+      "term": "Insang",
+      "cat": "ikan",
+      "def": "Organ pernapasan ikan di bawah tutup insang; napas cepat bisa menandakan masalah air atau penyakit."
+    },
+    {
+      "term": "Gelembung renang (swim bladder)",
+      "cat": "ikan",
+      "def": "Organ berisi gas yang membantu ikan mengatur daya apung.",
+      "article": "swim"
+    },
+    {
+      "term": "Sisik",
+      "cat": "ikan",
+      "def": "Lapisan pelindung tubuh; sisik berdiri adalah tanda bahaya."
+    },
+    {
+      "term": "Cycling",
+      "cat": "rawat",
+      "def": "Proses membangun koloni bakteri nitrifikasi di filter sebelum ikan dimasukkan.",
+      "article": "setup"
+    },
+    {
+      "term": "Aklimatisasi",
+      "cat": "rawat",
+      "def": "Penyesuaian ikan terhadap suhu dan parameter air baru, berlangsung beberapa jam.",
+      "article": "baru"
+    },
+    {
+      "term": "Karantina",
+      "cat": "rawat",
+      "def": "Memelihara ikan baru atau sakit secara terpisah untuk observasi, berlangsung beberapa minggu.",
+      "article": "baru"
+    },
+    {
+      "term": "Isolasi",
+      "cat": "rawat",
+      "def": "Memisahkan ikan sakit dari ikan lain agar tidak menular dan lebih mudah dipantau."
+    },
+    {
+      "term": "Ganti air",
+      "cat": "rawat",
+      "def": "Mengganti sebagian air akuarium untuk menurunkan nitrat dan menjaga kualitas air.",
+      "article": "rutin"
+    },
+    {
+      "term": "Sedot kotoran (siphon)",
+      "cat": "rawat",
+      "def": "Menyedot kotoran dari dasar akuarium, biasanya sekaligus saat ganti air.",
+      "article": "rutin"
+    },
+    {
+      "term": "Puasa",
+      "cat": "rawat",
+      "def": "Menghentikan pakan sementara, kadang dipakai saat dugaan gangguan pencernaan.",
+      "article": "swim"
+    },
+    {
+      "term": "Pakan tenggelam",
+      "cat": "rawat",
+      "def": "Pakan yang jatuh ke dasar; mengurangi ikan menelan udara saat makan di permukaan."
+    },
+    {
+      "term": "Kepadatan ikan (stocking)",
+      "cat": "rawat",
+      "def": "Jumlah ikan relatif terhadap volume air dan kemampuan filter.",
+      "article": "setup"
+    },
+    {
+      "term": "Bahan aktif",
+      "cat": "rawat",
+      "def": "Zat utama dalam obat; pilih obat berdasarkan bahan aktif dan ikuti label produk."
+    },
+    {
+      "term": "Aerasi",
+      "cat": "air",
+      "def": "Penambahan oksigen dan sirkulasi air, misalnya lewat air stone.",
+      "article": "setup"
+    },
+    {
+      "term": "Amonia",
+      "cat": "air",
+      "def": "Limbah beracun dari kotoran dan sisa pakan; harus terbaca 0 pada akuarium yang sudah cycling.",
+      "article": "setup"
+    },
+    {
+      "term": "Nitrit",
+      "cat": "air",
+      "def": "Hasil perubahan amonia oleh bakteri; juga beracun dan harus 0.",
+      "article": "setup"
+    },
+    {
+      "term": "Nitrat",
+      "cat": "air",
+      "def": "Hasil akhir siklus nitrogen; dikendalikan dengan ganti air.",
+      "article": "setup"
+    },
+    {
+      "term": "Bakteri nitrifikasi",
+      "cat": "air",
+      "def": "Bakteri baik yang mengubah amonia menjadi nitrit, lalu nitrat.",
+      "article": "setup"
+    },
+    {
+      "term": "pH",
+      "cat": "air",
+      "def": "Ukuran keasaman air; stabilitas lebih penting daripada angka sempurna.",
+      "article": "setup"
+    },
+    {
+      "term": "ppm",
+      "cat": "air",
+      "def": "Satuan konsentrasi, umumnya untuk nitrat dan parameter air lain."
+    },
+    {
+      "term": "Dechlorinator",
+      "cat": "air",
+      "def": "Penetral klorin dan kloramin pada air keran sebelum dipakai di akuarium."
+    },
+    {
+      "term": "Filtrasi mekanis",
+      "cat": "air",
+      "def": "Penyaringan kotoran padat, misalnya dengan spons.",
+      "article": "setup"
+    },
+    {
+      "term": "Filtrasi biologis",
+      "cat": "air",
+      "def": "Penguraian limbah oleh bakteri pada media filter.",
+      "article": "setup"
+    },
+    {
+      "term": "Media filter",
+      "cat": "air",
+      "def": "Bahan di dalam filter tempat bakteri menempel; cuci dengan air akuarium.",
+      "article": "setup"
+    },
+    {
+      "term": "Test kit",
+      "cat": "air",
+      "def": "Alat pengukur amonia, nitrit, nitrat, pH, dan parameter lain."
+    },
+    {
+      "term": "Bioload",
+      "cat": "air",
+      "def": "Beban limbah yang dihasilkan ikan dan pakan terhadap akuarium.",
+      "article": "setup"
+    },
+    {
+      "term": "White spot (Ich)",
+      "cat": "sakit",
+      "def": "Penyakit parasit dengan bintik putih seperti butiran garam pada tubuh dan sirip.",
+      "article": "whitespot"
+    },
+    {
+      "term": "Aeromonas",
+      "cat": "sakit",
+      "def": "Genus bakteri yang dapat menyebabkan luka, borok, dan perdarahan pada ikan stres.",
+      "article": "aeromonas"
+    },
+    {
+      "term": "Borok (ulcer)",
+      "cat": "sakit",
+      "def": "Luka terbuka pada tubuh, sering terkait infeksi bakteri.",
+      "article": "aeromonas"
+    },
+    {
+      "term": "Dropsy (sisik nanas)",
+      "cat": "sakit",
+      "def": "Perut membengkak dengan sisik berdiri; gejala kondisi serius, bukan penyakit tunggal. Segera periksa air dan konsultasi dokter hewan ikan."
+    },
+    {
+      "term": "Busuk sirip (fin rot)",
+      "cat": "sakit",
+      "def": "Sirip rusak dan menipis dari tepi, sering terkait air buruk."
+    },
+    {
+      "term": "Sembelit",
+      "cat": "sakit",
+      "def": "Gangguan pencernaan yang dapat memengaruhi keseimbangan renang.",
+      "article": "swim"
+    },
+    {
+      "term": "Gangguan swim bladder",
+      "cat": "sakit",
+      "def": "Ikan berenang miring, terbalik, atau mengapung; gejala dengan banyak kemungkinan penyebab.",
+      "article": "swim"
+    },
+    {
+      "term": "Kutu jarum",
+      "cat": "sakit",
+      "def": "Parasit kecil pipih yang menempel di kulit ikan dan menyebabkan iritasi."
+    },
+    {
+      "term": "Jamur",
+      "cat": "sakit",
+      "def": "Lapisan seperti kapas pada luka atau tubuh, biasanya infeksi sekunder."
+    },
+    {
+      "term": "Keracunan amonia",
+      "cat": "sakit",
+      "def": "Kerusakan akibat amonia tinggi, ditandai napas cepat dan lesu.",
+      "article": "setup"
+    },
+    {
+      "term": "Antibiotik",
+      "cat": "sakit",
+      "def": "Obat untuk infeksi bakteri; gunakan berdasarkan pertimbangan tepat, idealnya dengan dokter hewan.",
+      "article": "aeromonas"
+    },
+    {
+      "term": "Menggesek (flashing)",
+      "cat": "sakit",
+      "def": "Ikan menggosokkan badan ke benda; tanda iritasi atau parasit."
+    },
+    {
+      "term": "Sirip menguncup",
+      "cat": "sakit",
+      "def": "Sirip dirapatkan ke tubuh; tanda stres atau tidak sehat."
+    },
+    {
+      "term": "Megap-megap",
+      "cat": "sakit",
+      "def": "Ikan bernapas di permukaan; cek oksigen dan kualitas air segera."
+    },
+    {
+      "term": "Lesu",
+      "cat": "sakit",
+      "def": "Ikan pasif, sedikit bergerak, dan nafsu makan turun."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin – HeyGoldfish</title>
+<link href="config.yml" type="text/yaml" rel="cms-config-url">
+</head>
+<body>
+<script src="https://unpkg.com/@sveltia/cms@0.241.0/dist/sveltia-cms.js"></script>
+<script>
+/* Blok khusus yang bisa disisipkan dari editor (tombol + / ikon komponen). Hasilnya tersimpan sebagai teks Markdown biasa. */
+CMS.registerEditorComponent({
+  id: 'callout', label: 'Kotak catatan',
+  fields: [
+    { name: 'type', label: 'Jenis', widget: 'select', default: 'warn', options: [
+      { label: 'Peringatan', value: 'warn' }, { label: 'Info', value: 'info' },
+      { label: 'Tanda bahaya', value: 'danger' }, { label: 'Tips / aman', value: 'ok' }] },
+    { name: 'text', label: 'Isi', widget: 'text' }],
+  pattern: /^:::(warn|info|danger|ok)\n([\s\S]*?)\n:::$/,
+  fromBlock: m => ({ type: m[1], text: m[2] }),
+  toBlock: o => `:::${o.type}\n${o.text}\n:::`,
+  toPreview: o => `<div><b>[${o.type}]</b> ${o.text}</div>`
+});
+CMS.registerEditorComponent({
+  id: 'video', label: 'Video (file)',
+  fields: [
+    { name: 'src', label: 'File video (MP4)', widget: 'file' },
+    { name: 'poster', label: 'Gambar poster', widget: 'image', required: false },
+    { name: 'caption', label: 'Keterangan', widget: 'string', required: false }],
+  pattern: /^\{\{video (.*)\}\}$/,
+  fromBlock: m => { const o = {}; m[1].replace(/(\w+)="([^"]*)"/g, (_, k, v) => o[k] = v); return o; },
+  toBlock: o => `{{video src="${o.src || ''}"${o.poster ? ` poster="${o.poster}"` : ''}${o.caption ? ` caption="${o.caption}"` : ''}}}`,
+  toPreview: o => `<div>Video: ${o.src || ''}</div>`
+});
+CMS.registerEditorComponent({
+  id: 'youtube', label: 'Video YouTube',
+  fields: [
+    { name: 'id', label: 'ID video (bagian setelah v= pada tautan)', widget: 'string' },
+    { name: 'caption', label: 'Keterangan', widget: 'string', required: false }],
+  pattern: /^\{\{youtube (.*)\}\}$/,
+  fromBlock: m => { const o = {}; m[1].replace(/(\w+)="([^"]*)"/g, (_, k, v) => o[k] = v); return o; },
+  toBlock: o => `{{youtube id="${o.id || ''}"${o.caption ? ` caption="${o.caption}"` : ''}}}`,
+  toPreview: o => `<div>YouTube: ${o.id || ''}</div>`
+});
+CMS.registerEditorComponent({
+  id: 'galeri', label: 'Galeri foto',
+  fields: [{ name: 'images', label: 'Foto', widget: 'list', field: { name: 'image', label: 'Foto', widget: 'image' } }],
+  pattern: /^\{\{galeri images="([^"]*)"\}\}$/,
+  fromBlock: m => ({ images: m[1].split('|').filter(Boolean) }),
+  toBlock: o => `{{galeri images="${(o.images || []).join('|')}"}}`,
+  toPreview: o => `<div>Galeri: ${(o.images || []).length} foto</div>`
+});
+</script>
+</body>
+</html>

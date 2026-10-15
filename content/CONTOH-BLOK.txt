@@ -1,0 +1,13 @@
+Contoh sintaks blok khusus (salin ke dalam isi artikel .md):
+
+![Keterangan gambar](assets/images/foto.jpg)
+
+{{video src="assets/videos/aklimatisasi.mp4" poster="assets/images/poster.jpg" caption="Cara aklimatisasi"}}
+
+{{youtube id="ID_VIDEO" caption="Tutorial lengkap"}}
+
+{{galeri images="assets/images/a.jpg|assets/images/b.jpg|assets/images/c.jpg"}}
+
+:::warn
+Peringatan. Jenis lain: info, danger, ok.
+:::
