@@ -1,0 +1,1 @@
+tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{pri:'var(--pri)',bg:'var(--bg)',card:'var(--card)',bd:'var(--bd)',tx:'var(--tx)',mu:'var(--mu)',soft:'var(--soft)',ok:'var(--ok)'}}}}

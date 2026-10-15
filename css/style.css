@@ -1,0 +1,16 @@
+/* HeyGoldfish – Banyuwangi Goldfish Center */
+:root{--pri:#EE4B1F;--bg:#fff;--card:#fff;--bd:#E9ECEF;--tx:#121212;--mu:#6C757D;--soft:#F8F9FA;--ok:#E8F7EE;--warn:#FFF4E5;--hero:#121212;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1c1c1e;--bd:#2c2c2e;--tx:#f4f4f5;--mu:#a1a1aa;--soft:#232326;--ok:#16301f;--warn:#33270f;--hero:#1c1c1e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1c1c1e;--bd:#2c2c2e;--tx:#f4f4f5;--mu:#a1a1aa;--soft:#232326;--ok:#16301f;--warn:#33270f;--hero:#1c1c1e;color-scheme:dark}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{height:100%;margin:0;background:var(--soft);color:var(--tx)}
+
+.ns::-webkit-scrollbar{display:none}.ns{scrollbar-width:none}
+
+.tab{display:none;animation:f .25s}.tab.on{display:block}@keyframes f{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+
+.art p,.art li{font-size:13px;line-height:1.65;color:var(--tx)}.art ul,.art ol{padding-left:1.1rem;margin:.4rem 0}.art ul{list-style:disc}.art ol{list-style:decimal}
+
+.box{border-radius:14px;padding:12px;font-size:12.5px;line-height:1.55;margin-top:8px}
+
+.nv{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;font-weight:500;color:var(--mu);min-width:56px}.nv svg{width:22px;height:22px}.nv.on{color:var(--pri);font-weight:700}
