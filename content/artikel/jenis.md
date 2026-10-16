@@ -2,7 +2,7 @@
 title: Mengenali Jenis Ikan Goldfish
 category: kenal
 icon: fish
-cover: '/assets/images/AQUA ARTIST on Instagram_ “#goldfish #goldfishunion #goldfishkeeper #goldfishworld #oranda #goldfishmarket”.jpg'
+cover: /assets/images/download.jpg
 minutes: 5
 summary: Oranda, Ranchu, Ryukin, Fantail, Telescope, Lionhead dan ciri khasnya.
 keywords: oranda ranchu ryukin fantail telescope lionhead varietas ekor wen memilih
