@@ -50,7 +50,10 @@ function openA(id){const i=A.findIndex(a=>a.id==id);if(i<0)return;const a=A[i],p
  <div class="flex gap-3 mt-6">${p?`<button onclick="openA('${esc(p.id)}')" class="flex-1 text-left bg-soft border border-bd rounded-xl p-3 text-xs"><span class="text-mu">← Sebelumnya</span><br><b>${esc(p.title)}</b></button>`:'<div class="flex-1"></div>'}${n?`<button onclick="openA('${esc(n.id)}')" class="flex-1 text-right bg-soft border border-bd rounded-xl p-3 text-xs"><span class="text-mu">Berikutnya →</span><br><b>${esc(n.title)}</b></button>`:'<div class="flex-1"></div>'}</div>`;
  $('det').classList.remove('hidden');$('det').classList.add('flex');$('dbody').scrollTop=0}
 function closeA(){$('det').classList.add('hidden');$('det').classList.remove('flex')}
-function theme(t){document.documentElement.dataset.theme=t}
+const SUN='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/></svg>',MOON='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>';
+const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':!!(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)};
+function paintTheme(){const b=$('tg');if(!b)return;b.innerHTML=isDark()?SUN:MOON;b.setAttribute('aria-label',isDark()?'Mode terang':'Mode gelap')}
+function toggleTheme(){const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}paintTheme()}
 
 /* ---------- Kamus ---------- */
 function rK(){const v=$('kq').value.toLowerCase().trim();
@@ -83,4 +86,4 @@ async function load(){
   const m='<div class="box c-warn">Konten tidak dapat dimuat. Jalankan lewat server (mis. <b>npm start</b>) dan pastikan <b>content/index.json</b> ada.</div>';
   $('feat').innerHTML=m;$('list').innerHTML=m;console.error(e)}
  init()}
-load();go('home');
+load();go('home');paintTheme();

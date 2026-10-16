@@ -8,6 +8,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <title>HeyGoldfish – Panduan Merawat Goldfish</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -21,7 +22,7 @@
     <img src="assets/logo.png" alt="HeyGoldfish" width="44" height="44" class="w-11 h-11 rounded-full object-cover shrink-0">
     <div><h1 class="text-sm font-extrabold tracking-tight">HeyGoldfish</h1><p class="text-xs text-mu">Banyuwangi Goldfish Center</p></div>
   </div>
-  <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-ok" style="color:#1E8E4E">100% GRATIS</span>
+  <button id="tg" onclick="toggleTheme()" class="w-10 h-10 rounded-full bg-soft border border-bd flex items-center justify-center text-tx shrink-0" aria-label="Ganti tema"></button>
 </header>
 
 <main id="main" class="flex-1 overflow-y-auto ns pb-24">
@@ -90,8 +91,6 @@
       <p class="mt-3 font-semibold">Belajar, merawat, dan berkembang bersama HeyGoldfish.</p>
       <p class="mt-3">Seluruh konten dan fasilitas edukasi dalam website ini dapat diakses secara gratis oleh pelanggan HeyGoldfish. Kami berharap platform ini dapat membantu setiap penghobi memahami kebutuhan ikan dengan lebih baik, meningkatkan kualitas perawatan, dan menikmati hobi Goldfish dengan lebih percaya diri.</p>
       <div class="box bg-ok mt-4 text-center"><b>HeyGoldfish — More Than Goldfish, A Community of Passion.</b></div>
-      <h3 class="text-sm font-bold mt-4">Tema tampilan</h3>
-      <div class="flex gap-2 mt-2"><button onclick="theme('light')" class="px-3 py-2 rounded-xl border border-bd bg-soft text-xs font-semibold">Terang</button><button onclick="theme('dark')" class="px-3 py-2 rounded-xl border border-bd bg-soft text-xs font-semibold">Gelap</button></div>
       <h3 class="text-sm font-bold mt-6">Terhubung dengan HeyGoldFish</h3>
       <p class="mt-1">Ikuti media sosial kami untuk mendapatkan tips perawatan, informasi seputar Goldfish, serta update stok ikan berkualitas pilihan langsung dari HeyGoldFish.</p>
       <div class="grid grid-cols-2 gap-3 mt-3 pb-6">
