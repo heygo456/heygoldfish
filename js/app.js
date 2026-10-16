@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id);
 const IC={fish:'<path d="M3 12c3-5 9-6 13-2l5-3v10l-5-3c-4 4-10 3-13-2z"/><circle cx="8" cy="11" r=".6" fill="currentColor"/>',tank:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 11c3 2 6-2 9 0s6 2 9 0"/>',box:'<path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/>',dots:'<circle cx="12" cy="12" r="8.5"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="14.5" cy="9" r="1" fill="currentColor"/><circle cx="12" cy="14.5" r="1" fill="currentColor"/>',drop:'<path d="M12 3.5c3.5 4.5 5.5 7.2 5.5 10a5.5 5.5 0 01-11 0c0-2.8 2-5.5 5.5-10z"/>',cal:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',wave:'<path d="M3 9c3-3 6 3 9 0s6-3 9 0M3 15c3-3 6 3 9 0s6-3 9 0"/>'};
 const ic=(n,s=28)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
 
-let A=[],K=[],P=[],S={},cat='all',kcat='all',tcat='all';
+let A=[],K=[],P=[],S={},IN={},cat='all',kcat='all',tcat='all';
 const KC={all:'Semua',ikan:'Ikan',rawat:'Perawatan',air:'Air & Alat',sakit:'Penyakit'};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const pth=p=>esc(String(p||'').replace(/^\/+/,''));
@@ -101,6 +101,25 @@ function shareA(id){const a=A.find(x=>x.id==id);if(!a)return;const u=location.hr
  if(navigator.share)navigator.share({title:a.title,url:u}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(u).then(()=>toast('Tautan artikel disalin'),()=>toast(u));else toast(u)}
 addEventListener('hashchange',route);
 
+/* ---------- Halaman Info: teks dari content/info.json + galeri geser ---------- */
+function rInfo(){const t=IN;
+ $('itop').innerHTML=`<h2 class="text-lg font-extrabold" style="margin:.9rem 0 0">${esc(t.judul||'Tentang HeyGoldfish')}</h2>${t.subjudul?`<div class="text-sm font-bold text-pri mt-1">${esc(t.subjudul)}</div>`:''}${t.isi?renderMd(t.isi):''}${t.penutup?`<div class="box bg-ok mt-4 text-center"><b>${esc(t.penutup)}</b></div>`:''}`;
+ $('kjudul').textContent=t.kontak_judul||'Terhubung dengan HeyGoldFish';$('kteks').textContent=t.kontak_teks||'';$('fjudul').textContent=t.faq_judul||'Pertanyaan Seputar Pembelian';rG()}
+function rG(){const g=(IN.galeri||[]).filter(x=>x&&x.image),w=$('igal');clearInterval(rG.t);
+ if(!g.length){w.innerHTML='';return}
+ const arrow=(d,l)=>`<button onclick="gGo(${d})" aria-label="${d<0?'Foto sebelumnya':'Foto berikutnya'}" class="absolute top-1/2 -translate-y-1/2 ${l} w-9 h-9 rounded-full flex items-center justify-center text-lg font-bold" style="background:rgba(0,0,0,.45);color:#fff">${d<0?'‹':'›'}</button>`;
+ w.innerHTML=`<div class="relative mt-1"><div id="gs" class="flex overflow-x-auto ns" style="scroll-snap-type:x mandatory;border-radius:18px">${g.map(x=>`<div class="shrink-0 w-full relative" style="scroll-snap-align:center"><img src="${pth(x.image)}" alt="${esc(x.caption||'Galeri HeyGoldfish')}" loading="lazy" class="w-full object-cover" style="aspect-ratio:16/10;margin:0;border-radius:0">${x.caption?`<div class="absolute inset-x-0 bottom-0 px-4 py-3 text-xs font-semibold" style="color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))">${esc(x.caption)}</div>`:''}</div>`).join('')}</div>${g.length>1?arrow(-1,'left-2')+arrow(1,'right-2'):''}</div>${g.length>1?`<div id="gd" class="flex justify-center gap-1.5 mt-2">${g.map((_,i)=>`<button onclick="gTo(${i})" aria-label="Foto ${i+1}" style="width:8px;height:8px;border-radius:9px;background:var(--pri);opacity:.3;padding:0"></button>`).join('')}</div>`:''}`;
+ const s=$('gs');let hold=0;rG.n=g.length;
+ const cur=()=>s.clientWidth?Math.round(s.scrollLeft/s.clientWidth):0;
+ const dots=()=>{const d=$('gd');if(d)[...d.children].forEach((b,k)=>b.style.opacity=k==cur()?1:.3)};
+ gTo=i=>{s.scrollTo({left:i*s.clientWidth,behavior:'smooth'})};
+ gGo=d=>{hold=Date.now()+7000;gTo((cur()+d+g.length)%g.length)};
+ s.addEventListener('scroll',dots,{passive:true});
+ ['pointerdown','touchstart','wheel'].forEach(e=>s.addEventListener(e,()=>hold=Date.now()+7000,{passive:true}));
+ if(g.length>1&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))rG.t=setInterval(()=>{if(Date.now()<hold||!$('t-info').classList.contains('on')||!s.clientWidth)return;gTo((cur()+1)%g.length)},4000);
+ dots()}
+let gTo=()=>{},gGo=()=>{};
+
 /* ---------- Kamus ---------- */
 function rK(){const v=$('kq').value.toLowerCase().trim();
  $('kc').innerHTML=Object.entries(KC).map(([k,n])=>`<button onclick="kcat='${k}';rK()" class="px-4 py-2 rounded-xl text-xs whitespace-nowrap border ${kcat==k?'bg-tx font-bold':'bg-soft border-bd text-mu'}" ${kcat==k?'style="color:var(--bg)"':''}>${n}</button>`).join('');
@@ -116,12 +135,12 @@ function init(){$('dsh').innerHTML=ISH;chips();feat();
  $('list').innerHTML=A.map(card).join('');
  $('soon').innerHTML=SOON.map(s=>`<span class="text-[11px] px-3 py-1.5 rounded-full bg-soft border border-bd text-mu">${s}</span>`).join('');
  $('sug').innerHTML=['white spot','berenang miring','filter','oranda','karantina','borok'].map(s=>`<button onclick="$('q').value='${s}';doSearch()" class="text-[11px] px-3 py-1.5 rounded-full bg-soft border border-bd">${s}</button>`).join('');
- doSearch();rK();rT();rHome();rI()}
+ doSearch();rK();rT();rHome();rI();rInfo()}
 async function load(){
  try{
   const j=u=>fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(u);return r.json()});
-  const [i,k,t,s]=await Promise.all([j('content/index.json'),j('content/kamus.json').catch(()=>({items:[]})),j('content/toko.json').catch(()=>({items:[]})),j('content/pengaturan.json').catch(()=>({}))]);
-  A=(i.articles||[]).sort((a,b)=>(a.order??99)-(b.order??99));K=k.items||[];P=t.items||[];S=s||{};
+  const [i,k,t,s,n]=await Promise.all([j('content/index.json'),j('content/kamus.json').catch(()=>({items:[]})),j('content/toko.json').catch(()=>({items:[]})),j('content/pengaturan.json').catch(()=>({})),j('content/info.json').catch(()=>({}))]);
+  A=(i.articles||[]).sort((a,b)=>(a.order??99)-(b.order??99));K=k.items||[];P=t.items||[];S=s||{};IN=n||{};
  }catch(e){
   const m='<div class="box c-warn">Konten tidak dapat dimuat. Jalankan lewat server (mis. <b>npm start</b>) dan pastikan <b>content/index.json</b> ada.</div>';
   $('feat').innerHTML=m;$('list').innerHTML=m;console.error(e)}

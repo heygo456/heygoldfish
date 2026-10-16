@@ -144,3 +144,27 @@ collections:
             fields:
               - { label: Pertanyaan, name: q, widget: string }
               - { label: Jawaban, name: a, widget: text }
+
+  - name: info
+    label: Halaman Info
+    files:
+      - label: Teks & Galeri Info
+        name: info
+        file: content/info.json
+        format: json
+        fields:
+          - label: Galeri foto (geser otomatis di bagian atas Info)
+            name: galeri
+            widget: list
+            required: false
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Foto, name: image, widget: image }
+              - { label: Keterangan (opsional), name: caption, widget: string, required: false }
+          - { label: Judul halaman, name: judul, widget: string }
+          - { label: Subjudul, name: subjudul, widget: string, required: false }
+          - { label: Isi, name: isi, widget: markdown, required: false, hint: "Pisahkan paragraf dengan baris kosong. Teks tebal dengan tombol B." }
+          - { label: "Kalimat penutup (kotak hijau)", name: penutup, widget: string, required: false }
+          - { label: "Judul bagian kontak", name: kontak_judul, widget: string, required: false }
+          - { label: "Teks pengantar kontak", name: kontak_teks, widget: text, required: false }
+          - { label: "Judul bagian FAQ", name: faq_judul, widget: string, required: false }

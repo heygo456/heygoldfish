@@ -39,3 +39,5 @@ body{height:100%;margin:0;background:var(--soft);color:var(--tx)}
 button,a{-webkit-tap-highlight-color:transparent}
 details summary{list-style:none}details summary::-webkit-details-marker{display:none}
 details summary::after{content:"+";float:right;color:var(--pri);font-weight:800}details[open] summary::after{content:"–"}
+
+.art p{margin:.6rem 0}.art .box p{margin:0}
