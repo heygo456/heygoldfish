@@ -2,7 +2,7 @@
 title: Aklimasi Ikan Baru
 category: setup
 icon: fish
-cover: /assets/images/631541083_18057848216677803_6703188974899437825_n.jpg
+cover: /assets/images/Gemini_Generated_Image_ya3doeya3doeya3d.jpg
 minutes: 5
 summary: Penyesuaian Suhu Air Ikan Baru
 keywords: aklimasi aklimitasi ikan baru
@@ -12,7 +12,7 @@ order: 50
 
 # Cara Aklimasi Ikan Goldfish Baru
 
-![](/assets/images/631541083_18057848216677803_6703188974899437825_n.jpg)
+![](/assets/images/Gemini_Generated_Image_fcdg4zfcdg4zfcdg.jpg)
 
 Aklimasi adalah proses menyesuaikan ikan dengan kondisi air di lingkungan baru, seperti suhu, pH, dan kualitas air. Proses ini penting untuk mengurangi stres dan membantu goldfish beradaptasi sebelum masuk ke akuarium utama.
 
@@ -42,7 +42,3 @@ Amati perilaku ikan, kondisi sirip, sisik, insang, dan nafsu makan. Pastikan air
 - Aklimasi bukan pengganti karantina. Idealnya, karantina dilakukan selama **2–4 minggu**, dengan pemantauan kesehatan secara rutin.
 
 **Kesimpulan:** Aklimasi yang benar membantu mengurangi stres akibat perubahan lingkungan. Namun, kualitas air yang stabil dan karantina yang memadai tetap menjadi kunci agar goldfish baru sehat sebelum masuk ke akuarium utama.
-
-:::info
-source pic : instagram @adventuree_fish
-:::
