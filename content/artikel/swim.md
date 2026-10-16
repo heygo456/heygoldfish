@@ -2,6 +2,7 @@
 title: Swim Bladder & Gangguan Keseimbangan
 category: sakit
 icon: wave
+cover: /assets/images/Gemini_Generated_Image_r8mf3jr8mf3jr8mf.jpg
 minutes: 6
 summary: Berenang miring atau terbalik adalah gejala, bukan diagnosis tunggal.
 keywords: swim bladder gelembung renang miring terbalik apung tenggelam keseimbangan sembelit cerna
@@ -9,7 +10,7 @@ popular: true
 order: 7
 ---
 
-## Gambaran umum
+## ![](/assets/images/Gemini_Generated_Image_r8mf3jr8mf3jr8mf.jpg)
 
 Ikan berenang miring, terbalik, mengapung, atau sulit bertahan di posisi. Ini **gejala**, bukan selalu “penyakit swim bladder”.
 
