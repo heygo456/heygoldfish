@@ -15,7 +15,8 @@
     {
       "term": "Comet / Common",
       "cat": "ikan",
-      "def": "Goldfish bertubuh ramping dengan ekor tunggal, lebih tangguh dan bisa tumbuh besar."
+      "def": "Goldfish bertubuh ramping dengan ekor tunggal, lebih tangguh dan bisa tumbuh besar.",
+      "article": ""
     },
     {
       "term": "Ekor ganda",
@@ -44,7 +45,8 @@
     {
       "term": "Insang",
       "cat": "ikan",
-      "def": "Organ pernapasan ikan di bawah tutup insang; napas cepat bisa menandakan masalah air atau penyakit."
+      "def": "Organ pernapasan ikan di bawah tutup insang; napas cepat bisa menandakan masalah air atau penyakit.",
+      "article": ""
     },
     {
       "term": "Gelembung renang (swim bladder)",
@@ -55,7 +57,8 @@
     {
       "term": "Sisik",
       "cat": "ikan",
-      "def": "Lapisan pelindung tubuh; sisik berdiri adalah tanda bahaya."
+      "def": "Lapisan pelindung tubuh; sisik berdiri adalah tanda bahaya.",
+      "article": ""
     },
     {
       "term": "Cycling",
@@ -64,7 +67,7 @@
       "article": "setup"
     },
     {
-      "term": "Aklimatisasi",
+      "term": "Aklimasi",
       "cat": "rawat",
       "def": "Penyesuaian ikan terhadap suhu dan parameter air baru, berlangsung beberapa jam.",
       "article": ""
@@ -76,12 +79,13 @@
       "article": ""
     },
     {
-      "term": "Isolasi",
+      "term": "Karantina",
       "cat": "rawat",
-      "def": "Memisahkan ikan sakit dari ikan lain agar tidak menular dan lebih mudah dipantau."
+      "def": "Memisahkan ikan sakit dari ikan lain agar tidak menular dan lebih mudah dipantau.",
+      "article": ""
     },
     {
-      "term": "Ganti air",
+      "term": "Water Change (Ganti air)",
       "cat": "rawat",
       "def": "Mengganti sebagian air akuarium untuk menurunkan nitrat dan menjaga kualitas air.",
       "article": "rutin"
@@ -99,9 +103,10 @@
       "article": "swim"
     },
     {
-      "term": "Pakan tenggelam",
+      "term": "Sinking (Pakan tenggelam)",
       "cat": "rawat",
-      "def": "Pakan yang jatuh ke dasar; mengurangi ikan menelan udara saat makan di permukaan."
+      "def": "Pakan yang jatuh ke dasar; mengurangi ikan menelan udara saat makan di permukaan.",
+      "article": ""
     },
     {
       "term": "Kepadatan ikan (stocking)",
@@ -112,7 +117,8 @@
     {
       "term": "Bahan aktif",
       "cat": "rawat",
-      "def": "Zat utama dalam obat; pilih obat berdasarkan bahan aktif dan ikuti label produk."
+      "def": "Zat utama dalam obat; pilih obat berdasarkan bahan aktif dan ikuti label produk.",
+      "article": ""
     },
     {
       "term": "Aerasi",
@@ -153,12 +159,14 @@
     {
       "term": "ppm",
       "cat": "air",
-      "def": "Satuan konsentrasi, umumnya untuk nitrat dan parameter air lain."
+      "def": "Satuan konsentrasi, umumnya untuk nitrat dan parameter air lain.",
+      "article": ""
     },
     {
       "term": "Dechlorinator",
       "cat": "air",
-      "def": "Penetral klorin dan kloramin pada air keran sebelum dipakai di akuarium."
+      "def": "Penetral klorin dan kloramin pada air keran sebelum dipakai di akuarium.",
+      "article": ""
     },
     {
       "term": "Filtrasi mekanis",
@@ -169,7 +177,7 @@
     {
       "term": "Filtrasi biologis",
       "cat": "air",
-      "def": "Penguraian limbah oleh bakteri pada media filter.",
+      "def": "Penguraian limbah oleh bakteri pada media filter. Contoh : Batu Apung, Karang Jahe, Bioring, dll.",
       "article": "setup"
     },
     {
@@ -181,7 +189,8 @@
     {
       "term": "Test kit",
       "cat": "air",
-      "def": "Alat pengukur amonia, nitrit, nitrat, pH, dan parameter lain."
+      "def": "Alat pengukur amonia, nitrit, nitrat, pH, dan parameter lain.",
+      "article": ""
     },
     {
       "term": "Bioload",
@@ -210,12 +219,14 @@
     {
       "term": "Dropsy (sisik nanas)",
       "cat": "sakit",
-      "def": "Perut membengkak dengan sisik berdiri; gejala kondisi serius, bukan penyakit tunggal. Segera periksa air dan konsultasi dokter hewan ikan."
+      "def": "Perut membengkak dengan sisik berdiri; gejala kondisi serius, bukan penyakit tunggal. Segera periksa air dan konsultasi dokter hewan ikan.",
+      "article": ""
     },
     {
       "term": "Busuk sirip (fin rot)",
       "cat": "sakit",
-      "def": "Sirip rusak dan menipis dari tepi, sering terkait air buruk."
+      "def": "Sirip rusak dan menipis dari tepi, sering terkait air buruk.",
+      "article": ""
     },
     {
       "term": "Sembelit",
@@ -232,12 +243,14 @@
     {
       "term": "Kutu jarum",
       "cat": "sakit",
-      "def": "Parasit kecil pipih yang menempel di kulit ikan dan menyebabkan iritasi."
+      "def": "Parasit kecil pipih yang menempel di kulit ikan dan menyebabkan iritasi.",
+      "article": ""
     },
     {
       "term": "Jamur",
       "cat": "sakit",
-      "def": "Lapisan seperti kapas pada luka atau tubuh, biasanya infeksi sekunder."
+      "def": "Lapisan seperti kapas pada luka atau tubuh, biasanya infeksi sekunder.",
+      "article": ""
     },
     {
       "term": "Keracunan amonia",
@@ -254,22 +267,26 @@
     {
       "term": "Menggesek (flashing)",
       "cat": "sakit",
-      "def": "Ikan menggosokkan badan ke benda; tanda iritasi atau parasit."
+      "def": "Ikan menggosokkan badan ke benda; tanda iritasi atau parasit.",
+      "article": ""
     },
     {
       "term": "Sirip menguncup",
       "cat": "sakit",
-      "def": "Sirip dirapatkan ke tubuh; tanda stres atau tidak sehat."
+      "def": "Sirip dirapatkan ke tubuh; tanda stres atau tidak sehat.",
+      "article": ""
     },
     {
       "term": "Megap-megap",
       "cat": "sakit",
-      "def": "Ikan bernapas di permukaan; cek oksigen dan kualitas air segera."
+      "def": "Ikan bernapas di permukaan; cek oksigen dan kualitas air segera.",
+      "article": ""
     },
     {
       "term": "Lesu",
       "cat": "sakit",
-      "def": "Ikan pasif, sedikit bergerak, dan nafsu makan turun."
+      "def": "Ikan pasif, sedikit bergerak, dan nafsu makan turun.",
+      "article": ""
     }
   ]
 }
