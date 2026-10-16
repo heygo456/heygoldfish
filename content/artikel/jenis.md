@@ -24,7 +24,7 @@ Oranda memiliki tubuh relatif membulat, perut berisi, dan sirip ekor bercabang. 
 
 ### Ciri-ciri utama Oranda
 
-- {{video src="/assets/images/6c45ce5ac7a07c0d6be4a0aafbc56789_720w.mp4"}}
+{{video src="/assets/images/6c45ce5ac7a07c0d6be4a0aafbc56789_720w.mp4" poster="/assets/images/Screenshot%20%28548%29.png"}}
 
 ### Empat variasi Oranda
 
@@ -34,7 +34,7 @@ Oranda Long Tail memiliki karakteristik sirip ekor panjang yang menjuntai dan te
 
 Ciri-ciri:
 
-- {{galeri images="/assets/images/download.jpg"}}
+![](/assets/images/download.jpg "Oranda Long Tail OLT")
 
 B. Oranda Short Tail (OST)
 
@@ -42,7 +42,7 @@ Oranda Short Tail memiliki karakter ekor pendek dan tubuh yang tampak lebih komp
 
 Ciri-ciri:
 
-- {{galeri images="/assets/images/Oranda%20Sakura.jpg"}}
+![](/assets/images/Oranda%20Sakura.jpg "Oranda Short Tail OST")
 
 Perlu diketahui bahwa OST tidak selalu memiliki semua sirip yang pendek. Bentuk tubuh dan panjang ekor dapat berbeda menurut garis keturunan.
 
@@ -52,8 +52,6 @@ Oranda Redcap memiliki tubuh putih dengan wen berwarna merah mencolok di bagian 
 
 Ciri-ciri:
 
-- {{galeri images="/assets/images/Readcap%20oranda%20goldfish.jpg"}}
-
 Redcap lebih dikenal berdasarkan pola warna kepalanya, bukan berdasarkan panjang ekornya.
 
 D. Oranda Rosetail
@@ -62,7 +60,7 @@ Oranda Rosetail merupakan sebutan bagi Oranda yang memiliki susunan lipatan atau
 
 Ciri-ciri:
 
-- {{galeri images="/assets/images/AQUA%20ARTIST%20on%20Instagram_%20%E2%80%9C%23goldfish%20%23goldfishunion%20%23goldfishkeeper%20%23goldfishworld%20%23oranda%20%23goldfishmarket%E2%80%9D.jpg"}}
+![](/assets/images/AQUA%20ARTIST%20on%20Instagram_%20“#goldfish%20#goldfishunion%20#goldfishkeeper%20#goldfishworld%20#oranda%20#goldfishmarket”.jpg "Oranda Rosetail")
 
 Rosetail menekankan bentuk sirip. Penggunaannya sebagai nama tipe khusus dapat berbeda antarpembudidaya dan penjual.
 
@@ -72,7 +70,7 @@ Ryukin adalah varietas goldfish yang terkenal dengan bentuk tubuh pendek, tinggi
 
 ### Ciri-ciri utama Ryukin
 
-- {{galeri images="/assets/images/Ryukin%20Sakura.jpg"}}
+![](/assets/images/Ryukin%20Sakura.jpg "Ryukin")
 
 Pembeda utama: Oranda dikenali melalui wen di kepala, sedangkan Ryukin dikenali melalui punuk punggung yang tinggi. Ryukin tidak memiliki wen khas seperti Oranda.
 
@@ -84,7 +82,7 @@ Ranchu membutuhkan ketelitian dalam pemilihan bentuk tubuh karena kualitasnya di
 
 ### Ciri-ciri utama Ranchu
 
-- {{galeri images="/assets/images/download%20%281%29.jpg"}}
+![](/assets/images/download%20(1).jpg "Ranchu")
 
 ### Variasi Ranchu
 
@@ -100,7 +98,7 @@ Demekin dapat dijumpai dalam beragam warna dan bentuk tubuh. Salah satu variasi 
 
 ### Ciri-ciri utama Demekin
 
-- {{galeri images="/assets/images/Gold%20fish%20Demikin.jpg"}}
+![](/assets/images/Gold%20fish%20Demikin.jpg)
 
 ### Hal yang perlu diperhatikan
 
@@ -114,7 +112,7 @@ Meskipun sering dianggap sama dengan Ranchu, keduanya memiliki perbedaan bentuk 
 
 ### Ciri-ciri utama Lionhead
 
-- {{galeri images=""}}
+![](/assets/images/Goldfish.jpg)
 
 ### Perbedaan Lionhead dan Ranchu
 
