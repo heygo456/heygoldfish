@@ -1,10 +1,18 @@
 {
   "items": [
     {
-      "image": "/assets/images/download.jpg",
-      "title": "afzsfsafdsf",
-      "price": 12000,
-      "url": "https://shopee.co.id"
+      "type": "produk",
+      "image": "/assets/images/284142.jpg",
+      "title": "Methylene Blue",
+      "price": null,
+      "size": "",
+      "status": "",
+      "shopee": "https://s.shopee.co.id/113jQlYJM6",
+      "tokopedia": "",
+      "url": "",
+      "articles": [
+        "whitespot"
+      ]
     }
   ]
 }
