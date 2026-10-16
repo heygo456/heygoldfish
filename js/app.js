@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id);
 const IC={fish:'<path d="M3 12c3-5 9-6 13-2l5-3v10l-5-3c-4 4-10 3-13-2z"/><circle cx="8" cy="11" r=".6" fill="currentColor"/>',tank:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 11c3 2 6-2 9 0s6 2 9 0"/>',box:'<path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/>',dots:'<circle cx="12" cy="12" r="8.5"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="14.5" cy="9" r="1" fill="currentColor"/><circle cx="12" cy="14.5" r="1" fill="currentColor"/>',drop:'<path d="M12 3.5c3.5 4.5 5.5 7.2 5.5 10a5.5 5.5 0 01-11 0c0-2.8 2-5.5 5.5-10z"/>',cal:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',wave:'<path d="M3 9c3-3 6 3 9 0s6-3 9 0M3 15c3-3 6 3 9 0s6-3 9 0"/>'};
 const ic=(n,s=28)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
 
-let A=[],K=[],cat='all',kcat='all';
+let A=[],K=[],P=[],cat='all',kcat='all';
 const KC={all:'Semua',ikan:'Ikan',rawat:'Perawatan',air:'Air & Alat',sakit:'Penyakit'};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const pth=p=>esc(String(p||'').replace(/^\/+/,''));
@@ -61,18 +61,24 @@ function rK(){const v=$('kq').value.toLowerCase().trim();
  L+=`<div class="bg-card border border-bd rounded-2xl p-4 mb-2"><div class="flex justify-between gap-2"><p class="text-sm font-bold">${esc(x.term)}</p><span class="text-[10px] text-mu shrink-0">${esc(KC[x.cat]||'')}</span></div><p class="text-xs text-mu mt-1 leading-relaxed">${esc(x.def)}</p>${x.article&&A.some(a=>a.id==x.article)?`<button onclick="openA('${esc(x.article)}')" class="text-xs text-pri font-semibold mt-2">Baca panduan →</button>`:''}</div>`});
  $('kl').innerHTML=L||'<p class="text-xs text-mu">Istilah tidak ditemukan.</p>'}
 
+/* ---------- Toko ---------- */
+const rp=n=>{if(n===null||n===undefined||String(n).trim()==='')return '';const v=Number(n);return isFinite(v)?'Rp '+v.toLocaleString('id-ID'):esc(n)};
+const safeUrl=u=>/^https?:\/\//i.test(u||'')?esc(u):'#';
+function rT(){
+ $('tk').innerHTML=P.length?P.map(p=>`<div class="bg-card border border-bd rounded-2xl overflow-hidden flex flex-col">${p.image?`<img src="${pth(p.image)}" alt="${esc(p.title)}" loading="lazy" class="w-full aspect-square object-cover bg-soft">`:`<div class="w-full aspect-square bg-soft flex items-center justify-center text-pri">${ic('box',40)}</div>`}<div class="p-3 flex flex-col flex-1"><p class="text-xs font-bold leading-snug">${esc(p.title)}</p><p class="text-sm font-extrabold text-pri mt-1">${rp(p.price)}</p><div class="mt-auto pt-3"><a href="${safeUrl(p.url)}" target="_blank" rel="noopener noreferrer" class="block text-center bg-pri text-white text-xs font-bold py-2.5 rounded-xl active:scale-95">Beli</a></div></div></div>`).join(''):'<p class="col-span-2 text-xs text-mu">Produk segera hadir.</p>'}
+
 /* ---------- Mulai ---------- */
 function init(){chips();feat();
  $('pop').innerHTML=A.filter(a=>a.popular).map(a=>`<button onclick="openA('${esc(a.id)}')" class="shrink-0 w-36 text-left bg-card border border-bd rounded-2xl p-3">${a.cover?`<img src="${pth(a.cover)}" alt="" class="w-full h-16 object-cover rounded-xl">`:`<div class="text-pri">${ic(IC[a.icon]?a.icon:'fish',28)}</div>`}<p class="text-xs font-bold mt-2 leading-snug">${esc(a.title)}</p><p class="text-[10px] text-mu mt-1">${esc(a.minutes||5)} mnt</p></button>`).join('');
  $('list').innerHTML=A.map(card).join('');
  $('soon').innerHTML=SOON.map(s=>`<span class="text-[11px] px-3 py-1.5 rounded-full bg-soft border border-bd text-mu">${s}</span>`).join('');
  $('sug').innerHTML=['white spot','berenang miring','filter','oranda','karantina','borok'].map(s=>`<button onclick="$('q').value='${s}';doSearch()" class="text-[11px] px-3 py-1.5 rounded-full bg-soft border border-bd">${s}</button>`).join('');
- doSearch();rK()}
+ doSearch();rK();rT()}
 async function load(){
  try{
   const j=u=>fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(u);return r.json()});
-  const [i,k]=await Promise.all([j('content/index.json'),j('content/kamus.json').catch(()=>({items:[]}))]);
-  A=(i.articles||[]).sort((a,b)=>(a.order??99)-(b.order??99));K=k.items||[];
+  const [i,k,t]=await Promise.all([j('content/index.json'),j('content/kamus.json').catch(()=>({items:[]})),j('content/toko.json').catch(()=>({items:[]}))]);
+  A=(i.articles||[]).sort((a,b)=>(a.order??99)-(b.order??99));K=k.items||[];P=t.items||[];
  }catch(e){
   const m='<div class="box c-warn">Konten tidak dapat dimuat. Jalankan lewat server (mis. <b>npm start</b>) dan pastikan <b>content/index.json</b> ada.</div>';
   $('feat').innerHTML=m;$('list').innerHTML=m;console.error(e)}

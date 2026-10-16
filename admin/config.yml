@@ -73,3 +73,26 @@ collections:
                 value_field: "{{slug}}"
                 display_fields: [title]
                 required: false
+
+  - name: toko
+    label: Toko
+    files:
+      - label: Katalog Produk
+        name: katalog
+        file: content/toko.json
+        format: json
+        fields:
+          - label: Produk
+            name: items
+            widget: list
+            label_singular: Produk
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Gambar produk, name: image, widget: image, required: false }
+              - { label: Judul produk, name: title, widget: string }
+              - { label: Harga (angka saja, tanpa titik; contoh 25000), name: price, widget: number, value_type: int, min: 0 }
+              - label: URL tujuan tombol Beli
+                name: url
+                widget: string
+                hint: "Awali dengan https:// (tautan marketplace, WhatsApp, dll.)"
+                pattern: ['^https?://', "Harus diawali http:// atau https://"]

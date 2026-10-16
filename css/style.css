@@ -13,7 +13,7 @@ body{height:100%;margin:0;background:var(--soft);color:var(--tx)}
 
 .box{border-radius:14px;padding:12px;font-size:12.5px;line-height:1.55;margin-top:8px}
 
-.nv{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;font-weight:500;color:var(--mu);min-width:56px}.nv svg{width:22px;height:22px}.nv.on{color:var(--pri);font-weight:700}
+.nv{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;font-weight:500;color:var(--mu);min-width:50px}.nv svg{width:22px;height:22px}.nv.on{color:var(--pri);font-weight:700}
 
 /* ===== Konten artikel (Markdown) ===== */
 :root{--danger:#FDECEA}
