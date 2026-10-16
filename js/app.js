@@ -70,7 +70,7 @@ function init(){chips();feat();
  doSearch();rK()}
 async function load(){
  try{
-  const j=u=>fetch(u).then(r=>{if(!r.ok)throw new Error(u);return r.json()});
+  const j=u=>fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(u);return r.json()});
   const [i,k]=await Promise.all([j('content/index.json'),j('content/kamus.json').catch(()=>({items:[]}))]);
   A=(i.articles||[]).sort((a,b)=>(a.order??99)-(b.order??99));K=k.items||[];
  }catch(e){
