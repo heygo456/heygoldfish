@@ -88,11 +88,59 @@ collections:
             label_singular: Produk
             summary: "{{fields.title}}"
             fields:
-              - { label: Gambar produk, name: image, widget: image, required: false }
-              - { label: Judul produk, name: title, widget: string }
-              - { label: Harga (angka saja, tanpa titik; contoh 25000), name: price, widget: number, value_type: int, min: 0 }
-              - label: URL tujuan tombol Beli
-                name: url
-                widget: string
-                hint: "Awali dengan https:// (tautan marketplace, WhatsApp, dll.)"
-                pattern: ['^https?://', "Harus diawali http:// atau https://"]
+              - label: Jenis
+                name: type
+                widget: select
+                default: ikan
+                options:
+                  - { label: "Ikan (dibeli lewat WhatsApp)", value: ikan }
+                  - { label: "Perlengkapan / obat / pakan (Shopee atau Tokopedia)", value: produk }
+              - { label: Gambar, name: image, widget: image, required: false }
+              - { label: Judul, name: title, widget: string }
+              - { label: Harga (angka saja; contoh 25000), name: price, widget: number, value_type: int, min: 0, required: false }
+              - { label: "Ukuran (khusus ikan, mis. 10 cm)", name: size, widget: string, required: false }
+              - label: "Status (khusus ikan)"
+                name: status
+                widget: select
+                default: tersedia
+                required: false
+                options:
+                  - { label: Tersedia, value: tersedia }
+                  - { label: Pre-order, value: preorder }
+                  - { label: Terjual, value: terjual }
+              - { label: "Link Shopee (khusus produk)", name: shopee, widget: string, required: false, pattern: ['^https?://', "Harus diawali https://"] }
+              - { label: "Link Tokopedia (khusus produk)", name: tokopedia, widget: string, required: false, pattern: ['^https?://', "Harus diawali https://"] }
+              - { label: "Link lain (opsional, dipakai bila Shopee/Tokopedia kosong)", name: url, widget: string, required: false, pattern: ['^https?://', "Harus diawali https://"] }
+              - label: "Tampilkan di artikel (opsional)"
+                name: articles
+                widget: relation
+                collection: artikel
+                search_fields: [title]
+                value_field: "{{slug}}"
+                display_fields: [title]
+                multiple: true
+                required: false
+
+  - name: situs
+    label: Pengaturan Situs
+    files:
+      - label: Kontak, Komunitas & FAQ
+        name: kontak
+        file: content/pengaturan.json
+        format: json
+        fields:
+          - { label: "Nomor WhatsApp (format 62..., tanpa + atau spasi)", name: whatsapp, widget: string }
+          - { label: Link TikTok, name: tiktok, widget: string, required: false }
+          - { label: "Link grup/channel komunitas WhatsApp", name: komunitas, widget: string, required: false }
+          - { label: "Link formulir pendaftaran penghobi (Google Form/Tally)", name: formulir, widget: string, required: false }
+          - { label: Alamat, name: alamat, widget: text, required: false }
+          - { label: "Jam buka", name: jam, widget: string, required: false }
+          - { label: "Link Google Maps", name: maps, widget: string, required: false }
+          - label: "FAQ pembelian"
+            name: faq
+            widget: list
+            required: false
+            summary: "{{fields.q}}"
+            fields:
+              - { label: Pertanyaan, name: q, widget: string }
+              - { label: Jawaban, name: a, widget: text }

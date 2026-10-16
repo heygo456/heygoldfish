@@ -1,0 +1,23 @@
+{
+  "whatsapp": "6282375366949",
+  "tiktok": "https://www.tiktok.com/@heygoldfish.bwi",
+  "komunitas": "",
+  "formulir": "",
+  "alamat": "Banyuwangi, Jawa Timur",
+  "jam": "",
+  "maps": "",
+  "faq": [
+    {
+      "q": "Bagaimana cara membeli ikan?",
+      "a": "Buka menu Toko, pilih ikan, lalu tekan tombol WhatsApp. Kami akan mengonfirmasi ketersediaan, harga, dan cara pembayaran."
+    },
+    {
+      "q": "Bagaimana cara membeli perlengkapan dan obat?",
+      "a": "Perlengkapan, obat, dan pakan dibeli lewat Shopee atau Tokopedia. Tekan tombol toko yang tersedia pada kartu produk."
+    },
+    {
+      "q": "Apakah materi di website ini gratis?",
+      "a": "Ya, seluruh artikel dan kamus dapat dibaca gratis tanpa biaya."
+    }
+  ]
+}

@@ -37,17 +37,19 @@
             <span class="bg-pri text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Mulai dari sini</span>
             <h2 class="text-base font-bold mt-2 leading-tight">Jalur Pemula: dari Akuarium sampai Ikan Sehat</h2>
             <p class="text-xs mt-1" style="color:#d4d4d8">Belajar bertahap, semua materi gratis.</p>
-            <button onclick="startA()" class="mt-4 bg-white text-black text-xs font-bold px-4 py-2 rounded-xl active:scale-95">Mulai Belajar</button>
+            <button onclick="startA()" class="mt-4 bg-white text-black text-xs font-bold px-4 py-2.5 rounded-xl active:scale-95">Mulai Belajar</button>
           </div>
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" style="color:#fff"><path d="M3 12c3-5 9-6 13-2l5-3v10l-5-3c-4 4-10 3-13-2z"/><circle cx="8" cy="11" r=".6" fill="currentColor"/></svg>
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3-5 9-6 13-2l5-3v10l-5-3c-4 4-10 3-13-2z"/><circle cx="8" cy="11" r=".6" fill="#fff"/></svg>
         </div>
       </div>
     </div>
+    <div id="qa" class="px-5 mt-3 grid grid-cols-2 gap-3"></div>
+    <div id="stokw" class="mt-5 hidden"><div class="px-5 flex justify-between items-center mb-3"><h3 class="text-sm font-bold">Stok Ikan Terbaru</h3><button onclick="go('toko')" class="text-xs text-pri font-semibold">Lihat Semua</button></div><div id="stok" class="px-5 flex gap-3 overflow-x-auto ns pb-1"></div></div>
     <div class="mt-5">
       <div class="px-5 flex justify-between items-center mb-3"><h3 class="text-sm font-bold">Kategori Materi</h3><button onclick="go('materi')" class="text-xs text-pri font-semibold">Lihat Semua</button></div>
       <div id="chips" class="px-5 flex gap-2 overflow-x-auto ns pb-1"></div>
     </div>
-    <div class="mt-5 px-5"><h3 class="text-sm font-bold mb-3">Artikel Pilihan</h3><div id="feat" class="space-y-3"></div></div>
+    <div class="mt-5 px-5"><h3 class="text-sm font-bold mb-3">Artikel Pilihan</h3><div id="feat" class="space-y-3"><p class="text-xs text-mu">Memuat…</p></div></div>
     <div class="mt-5 px-5"><h3 class="text-sm font-bold mb-3">Sering Dibaca</h3><div id="pop" class="flex gap-3 overflow-x-auto ns pb-1"></div></div>
     <div class="mt-5 px-5"><div class="box bg-soft border border-bd text-mu">Gejala serupa bisa disebabkan hal berbeda. Panduan ini bersifat edukasi dan tidak menggantikan dokter hewan ikan.</div></div>
   </section>
@@ -77,7 +79,8 @@
 
   <!-- TOKO -->
   <section id="t-toko" class="tab">
-    <div class="px-5 pt-4"><h2 class="text-lg font-extrabold">Toko</h2><p class="text-xs text-mu">Katalog produk pilihan HeyGoldfish. Tekan Beli untuk menuju halaman pembelian.</p></div>
+    <div class="px-5 pt-4"><h2 class="text-lg font-extrabold">Toko</h2><p class="text-xs text-mu">Ikan dipesan lewat WhatsApp. Perlengkapan, obat, dan pakan dibeli di Shopee atau Tokopedia.</p>
+      <div id="tc" class="flex gap-2 mt-3"></div></div>
     <div id="tk" class="px-5 mt-4 grid grid-cols-2 gap-3 pb-4"></div>
   </section>
 
@@ -91,12 +94,11 @@
       <p class="mt-3 font-semibold">Belajar, merawat, dan berkembang bersama HeyGoldfish.</p>
       <p class="mt-3">Seluruh konten dan fasilitas edukasi dalam website ini dapat diakses secara gratis oleh pelanggan HeyGoldfish. Kami berharap platform ini dapat membantu setiap penghobi memahami kebutuhan ikan dengan lebih baik, meningkatkan kualitas perawatan, dan menikmati hobi Goldfish dengan lebih percaya diri.</p>
       <div class="box bg-ok mt-4 text-center"><b>HeyGoldfish — More Than Goldfish, A Community of Passion.</b></div>
-      <h3 class="text-sm font-bold mt-6">Terhubung dengan HeyGoldFish</h3>
-      <p class="mt-1">Ikuti media sosial kami untuk mendapatkan tips perawatan, informasi seputar Goldfish, serta update stok ikan berkualitas pilihan langsung dari HeyGoldFish.</p>
-      <div class="grid grid-cols-2 gap-3 mt-3 pb-6">
-        <a href="https://wa.me/6282375366949" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-2xl text-xs font-bold active:scale-95" style="background:#25D366;color:#fff;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 8.5c0 3.2 2.8 6 6 6l1-2-2-1-1 1c-1-.4-2-1.4-2.4-2.4l1-1-1-2z"/></svg>WhatsApp</a>
-        <a href="https://www.tiktok.com/@heygoldfish.bwi" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-2xl text-xs font-bold active:scale-95" style="background:var(--tx);color:var(--bg);text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.5a3.5 3.5 0 11-3.5-3.5"/><path d="M14 4c.4 2.2 2 3.6 4 3.8"/></svg>TikTok</a>
-      </div>
+      <h3 class="text-sm font-bold mt-6 mb-2">Lokasi &amp; Terhubung dengan HeyGoldFish</h3>
+      <p class="mb-3">Ikuti media sosial kami untuk mendapatkan tips perawatan, informasi seputar Goldfish, serta update stok ikan berkualitas pilihan langsung dari HeyGoldFish.</p>
+      <div id="kontak"></div>
+      <h3 class="text-sm font-bold mt-6 mb-2">Pertanyaan Seputar Pembelian</h3>
+      <div id="faq" class="pb-6"></div>
     </div>
   </section>
 </main>
@@ -110,9 +112,11 @@
   <button class="nv" data-t="info" onclick="go('info')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8v.01"/></svg>Info</button>
 </nav>
 
+<div id="toast" class="absolute left-1/2 -translate-x-1/2 bottom-24 bg-tx text-xs font-semibold px-4 py-2 rounded-full pointer-events-none z-50" style="color:var(--bg);opacity:0;transition:opacity .25s"></div>
+
 <!-- DETAIL -->
 <div id="det" class="absolute inset-0 bg-bg z-30 hidden flex-col">
-  <div class="px-5 py-3 flex items-center gap-3 border-b border-bd shrink-0"><button onclick="closeA()" class="w-10 h-10 rounded-full bg-soft border border-bd text-base" aria-label="Kembali">←</button><span id="dcat" class="text-xs font-semibold text-pri"></span></div>
+  <div class="px-5 py-3 flex items-center gap-3 border-b border-bd shrink-0"><button onclick="closeA()" class="w-10 h-10 rounded-full bg-soft border border-bd text-base" aria-label="Kembali">←</button><span id="dcat" class="text-xs font-semibold text-pri flex-1"></span><button id="dsh" class="w-10 h-10 rounded-full bg-soft border border-bd flex items-center justify-center text-tx" aria-label="Bagikan artikel"></button></div>
   <div id="dbody" class="flex-1 overflow-y-auto ns px-5 pb-10 art"></div>
 </div>
 </div>
