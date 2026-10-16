@@ -13,6 +13,34 @@
       "articles": [
         "whitespot"
       ]
+    },
+    {
+      "type": "produk",
+      "image": "/assets/images/284155.jpg",
+      "title": "ACRIFLAVINE",
+      "price": null,
+      "size": "",
+      "status": "",
+      "shopee": "https://s.shopee.co.id/2qVNdYizfB",
+      "tokopedia": "",
+      "url": "",
+      "articles": [
+        "aeromonas"
+      ]
+    },
+    {
+      "type": "produk",
+      "image": "/assets/images/284156.jpg",
+      "title": "GARAM IKAN",
+      "price": null,
+      "size": "",
+      "status": "",
+      "shopee": "https://s.shopee.co.id/3g4UdOL135",
+      "tokopedia": "",
+      "url": "",
+      "articles": [
+        "aeromonas"
+      ]
     }
   ]
 }
