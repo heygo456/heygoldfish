@@ -2,7 +2,7 @@
 title: Pengobatan Aeromonas
 category: sakit
 icon: drop
-cover: /assets/images/9ea8924a-edac-4dc6-acd4-711a516dcc57_1100x.jpg
+cover: /assets/images/Gemini_Generated_Image_6fbm596fbm596fbm.jpg
 minutes: 7
 summary: 'Infeksi bakteri: luka, borok, perdarahan, dan kapan ke dokter hewan.'
 keywords: aeromonas bakteri luka borok ulcer perdarahan sirip busuk antibiotik dokter hewan merah
@@ -10,7 +10,7 @@ popular: false
 order: 5
 ---
 
-## ![](/assets/images/9ea8924a-edac-4dc6-acd4-711a516dcc57_1100x.jpg)
+## ![](/assets/images/Gemini_Generated_Image_xphdo3xphdo3xphd.jpg)
 
 Bakteri genus _Aeromonas_ ada di lingkungan perairan dan sering menyerang ikan yang stres atau terluka.
 
