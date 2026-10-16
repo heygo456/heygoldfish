@@ -2,6 +2,7 @@
 title: Pengobatan Aeromonas
 category: sakit
 icon: drop
+cover: /assets/images/9ea8924a-edac-4dc6-acd4-711a516dcc57_1100x.jpg
 minutes: 7
 summary: 'Infeksi bakteri: luka, borok, perdarahan, dan kapan ke dokter hewan.'
 keywords: aeromonas bakteri luka borok ulcer perdarahan sirip busuk antibiotik dokter hewan merah
@@ -9,15 +10,15 @@ popular: false
 order: 5
 ---
 
-## Gambaran umum
+## ![](/assets/images/9ea8924a-edac-4dc6-acd4-711a516dcc57_1100x.jpg)
 
-Bakteri genus *Aeromonas* ada di lingkungan perairan dan sering menyerang ikan yang stres atau terluka.
+Bakteri genus _Aeromonas_ ada di lingkungan perairan dan sering menyerang ikan yang stres atau terluka.
 
 ## Gejala
 
 - Garis atau bercak merah pada sirip dan tubuh.
 - Borok atau luka terbuka.
-- Sirip rusak, lesu, nafsu makan turun.
+- Sirip rusak, lesu  (ikan tidak aktif), nafsu makan turun.
 
 ## Pemeriksaan awal
 
@@ -27,10 +28,13 @@ Bakteri genus *Aeromonas* ada di lingkungan perairan dan sering menyerang ikan y
 
 ## Penanganan
 
-1. Perbaiki kualitas air dan kurangi stres (cahaya redup, kepadatan rendah).
-2. Isolasi ikan bila perlu.
-3. Jaga suhu stabil dan oksigen cukup.
-4. Konsultasikan dengan dokter hewan yang berpengalaman dengan ikan bila gejala berat atau memburuk.
+1. Perbaiki kualitas air (Water Cahnge) dan kurangi stres, kurangi kepadatan isi ikan di Aquarium.
+2. Karantina ikan yang terkena Aeromonas.
+3. Jaga suhu stabil dan tambahkan aerator agar oksigen cukup.
+4. Tambahkan obat _Acriflavine_ sesuai dosis.
+5. Tambahkan Garam Ikan secukupnya.
+6. Puasakan ikan (tanpa pakan) saat karantina
+7. Amati perkembangan ikan 2-3 hari
 
 :::warn
 Antibiotik harus berdasarkan pertimbangan tepat, bukan mencoba obat secara acak. Penggunaan yang keliru dapat gagal mengobati dan merusak biofilter.
@@ -45,3 +49,7 @@ Antibiotik harus berdasarkan pertimbangan tepat, bukan mencoba obat secara acak.
 ## Pencegahan
 
 Air bersih dan stabil, kepadatan wajar, karantina ikan baru, dan hindari dekorasi tajam.
+
+:::info
+source pic : birdantibiotic.com
+:::
