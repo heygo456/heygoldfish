@@ -28,37 +28,39 @@ Oranda memiliki tubuh relatif membulat, perut berisi, dan sirip ekor bercabang. 
 
 ### Empat variasi Oranda
 
-A. Oranda Long Tail (OLT)
+**A. Oranda Long Tail (OLT)**
 
 Oranda Long Tail memiliki karakteristik sirip ekor panjang yang menjuntai dan terlihat mengalir ketika berenang.
 
-Ciri-ciri:
+_Ciri-ciri:_
 
 ![](/assets/images/download.jpg "Oranda Long Tail OLT")
 
-B. Oranda Short Tail (OST)
+**B. Oranda Short Tail (OST)**
 
 Oranda Short Tail memiliki karakter ekor pendek dan tubuh yang tampak lebih kompak dibandingkan tipe Long Tail.
 
-Ciri-ciri:
+_Ciri-ciri:_
 
 ![](/assets/images/Oranda%20Sakura.jpg "Oranda Short Tail OST")
 
 Perlu diketahui bahwa OST tidak selalu memiliki semua sirip yang pendek. Bentuk tubuh dan panjang ekor dapat berbeda menurut garis keturunan.
 
-C. Oranda Redcap
+**C. Oranda Redcap**
 
 Oranda Redcap memiliki tubuh putih dengan wen berwarna merah mencolok di bagian atas kepala. Kontras warna merah dan putih menjadi daya tarik utamanya.
 
-Ciri-ciri:
+_Ciri-ciri:_
+
+![](/assets/images/Readcap%20oranda%20goldfish.jpg)
 
 Redcap lebih dikenal berdasarkan pola warna kepalanya, bukan berdasarkan panjang ekornya.
 
-D. Oranda Rosetail
+**D. Oranda Rosetail**
 
 Oranda Rosetail merupakan sebutan bagi Oranda yang memiliki susunan lipatan atau percabangan sirip ekor menyerupai kelopak bunga mawar.
 
-Ciri-ciri:
+_Ciri-ciri:_
 
 ![](/assets/images/AQUA%20ARTIST%20on%20Instagram_%20“#goldfish%20#goldfishunion%20#goldfishkeeper%20#goldfishworld%20#oranda%20#goldfishmarket”.jpg "Oranda Rosetail")
 
@@ -114,7 +116,7 @@ Meskipun sering dianggap sama dengan Ranchu, keduanya memiliki perbedaan bentuk 
 
 ![](/assets/images/Goldfish.jpg)
 
-### Perbedaan Lionhead dan Ranchu
+### _Perbedaan Lionhead dan Ranchu_
 
 Perbedaan paling mudah diamati adalah profil punggung dan posisi ekor. Ranchu memiliki punggung yang melengkung halus dan ekor yang cenderung mengarah ke bawah, sedangkan Lionhead umumnya memiliki punggung lebih datar dengan pertumbuhan wen yang lebih menyeluruh.
 
