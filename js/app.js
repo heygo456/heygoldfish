@@ -76,8 +76,8 @@ function feat(){const l=A.filter(a=>cat=='all'||a.category==cat);$('feat').inner
 function startA(){const a=A.find(x=>x.id==START_ID)||A[0];if(a)openA(a.id)}
 const hay=a=>(a.title+' '+a.summary+' '+(a.keywords||'')+' '+(a.body||'')).toLowerCase();
 function doSearch(){const v=$('q').value.toLowerCase().trim();const r=!v?A:A.filter(a=>{const h=hay(a);return h.includes(v)||v.split(/\s+/).every(w=>h.includes(w))});$('res').innerHTML=r.length?r.map(card).join(''):'<p class="text-xs text-mu">Tidak ditemukan. Coba kata kunci lain (nama penyakit, gejala, jenis ikan).</p>'}
-function goSearch(){go('cari');setTimeout(()=>$('q').focus(),50)}
-function go(t){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.id=='t-'+t));document.querySelectorAll('.nv').forEach(x=>x.classList.toggle('on',x.dataset.t==t));$('main').scrollTop=0}
+function goSearch(){const v=$('q0').value;$('q0').value='';go('cari');if(v){$('q').value=v;doSearch()}setTimeout(()=>$('q').focus(),50)}
+function go(t){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x.id=='t-'+t));document.querySelectorAll('.nv').forEach(x=>x.classList.toggle('on',x.dataset.t==(t=='cari'?'home':t)));$('main').scrollTop=0}
 
 /* ---------- Detail artikel (alamat #/artikel/slug) ---------- */
 function show(id){const i=A.findIndex(a=>a.id==id);if(i<0)return hideA();const a=A[i],p=A[i-1],n=A[i+1];
