@@ -30,7 +30,7 @@ Ikan berenang miring, terbalik, mengapung, atau sulit bertahan di posisi. Ini **
 ## Penanganan
 
 1. Perbaiki kualitas air dan jaga suhu stabil.
-2. Bila dicurigai pencernaan, puasakan sebentar lalu beri pakan yang tenggelam atau yang sudah direndam.
+2. Bila dicurigai pencernaan, puasakan sebentar atau beberapa hari hingga kondisi membaik, lalu beri pakan yang tenggelam atau yang sudah direndam.
 3. Kurangi arus kuat dan beri ruang agar ikan mudah mencapai pakan dan udara.
 4. Tangani penyebab lain bila ada gejala penyerta.
 
