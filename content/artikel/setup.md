@@ -2,6 +2,7 @@
 title: Setup Awal Akuarium
 category: setup
 icon: tank
+cover: ''
 minutes: 8
 summary: Ukuran, filtrasi, aerasi, cycling, dan parameter air.
 keywords: akuarium filter filtrasi aerasi cycling amonia nitrit nitrat ph suhu kapasitas bakteri volume
@@ -11,7 +12,13 @@ order: 2
 
 ## Ukuran & kapasitas
 
-Pedoman umum: sekitar 75 liter untuk ikan pertama dan tambahan sekitar 40 liter untuk tiap ikan berikutnya. Goldfish menghasilkan banyak kotoran, jadi lebih luas lebih baik. Kapasitas nyata bergantung pada volume air aktual dan kemampuan filter.
+Pedoman umum: Goldfish menghasilkan banyak kotoran, jadi hal utama yang perlu diperhatikan adalah pengendalian populasi dan pengolahan limbah ikan.
+
+## Pompa Filter
+
+Memilih pompa filter yang tepat sangat penting untuk menjaga kualitas air aquarium Goldfish. Pomp berfungsi mengalirkan air melewati media filter sehingga kotoran dapat tersaring dan bakteri baik dapat membantu menguraikan limbah ikan.
+
+Untuk aquarium Goldfish, gunakan acuan kapasitas sirkulasi sebesar **15x volume air per jam.** Acuan ini bertujuan menyediakan kapasitas aliran yang memadai setelah memperhitungkan penurunan debit akibat hambatan pipa, ketinggian dorongan air, dan media filter.
 
 ## Filtrasi & aerasi
 
