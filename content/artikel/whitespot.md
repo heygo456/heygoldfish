@@ -35,7 +35,7 @@ White spot (ich) disebabkan parasit _Ichthyophthirius multifiliis_: bintik putih
 4. Berikan obat _Metyhlene Blue (Obat Biru)_ ditempat karantina sesuai dosis.
 5. Tambah aerasi karena beberapa obat dan suhu tinggi menurunkan oksigen.\\
 6. Tambah Garam Ikan.
-7. Gunakan heater set suhu 28° C (opsional)
+7. Gunakan heater set suhu 28°-30° C (opsional)
 8. Pantau ikan setiap hari selama pengobatan.
 
 ## Hindari
